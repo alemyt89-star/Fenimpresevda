@@ -354,6 +354,7 @@
         </div>
 
         <form id="signup" novalidate>
+          <input type="hidden" name="fonte" id="fonte">
           <div class="field">
             <label>La tua impresa ha dipendenti?</label>
             <div class="seg">
@@ -445,6 +446,13 @@
       el.s.textContent=pad(Math.floor(diff%60000/1000));
     }
     tick();setInterval(tick,1000);
+  })();
+
+  // Fonte campagna: legge ?utm_source= (o ?f=) dall'indirizzo e la salva nel campo nascosto
+  (function(){
+    var p=new URLSearchParams(location.search);
+    var f=p.get('utm_source')||p.get('f')||'diretto';
+    var el=document.getElementById('fonte'); if(el) el.value=f;
   })();
 
   // Two-track selector
