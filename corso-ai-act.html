@@ -111,7 +111,8 @@
   @media(max-width:720px){.paths{grid-template-columns:1fr}}
 
   .speaker{display:grid;grid-template-columns:.8fr 1.4fr;gap:40px;align-items:center;background:linear-gradient(150deg,#fff,#eef4fb);border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:var(--shadow)}
-  .speaker .photo{aspect-ratio:1/1;border-radius:18px;background:linear-gradient(150deg,var(--navy),var(--blue));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px}
+  .speaker .photo{aspect-ratio:1/1;border-radius:18px;background:linear-gradient(150deg,var(--navy),var(--blue));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:0;overflow:hidden}
+  .speaker .photo img{width:100%;height:100%;object-fit:cover;display:block}
   .speaker .photo .mono{font-family:'Poppins',sans-serif;font-weight:700;font-size:3rem;line-height:1}
   .speaker .photo small{opacity:.85;margin-top:10px;font-size:.75rem}
   .speaker .eyebrow{color:var(--blue)}
@@ -318,8 +319,7 @@
     <div class="wrap">
       <div class="speaker">
         <div class="photo">
-          <span class="mono">CP</span>
-          <small><span class="ph">Foto da inserire</span></small>
+          <img src="pivato.jpg" alt="Cristiano Pivato, relatore del corso">
         </div>
         <div>
           <span class="eyebrow">Il relatore</span>
@@ -429,7 +429,7 @@
       </div>
     </div>
     <div class="bottom">
-      <span>© 2026 FenImprese Valle d'Aosta · <span class="ph"></span></span>
+      <span>© 2026 FenImprese Valle d'Aosta</span>
       <span><a href="privacy.html">Informativa privacy</a> · <a href="cookie.html">Cookie Policy</a></span>
     </div>
   </div>
