@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Assemblea Costituente · FenImprese Valle d'Aosta</title>
-<meta name="description" content="Iscriviti all'Assemblea Costituente di FenImprese Valle d'Aosta, 30 settembre 2026, Hostellerie du Cheval Blanc. Conferma la tua presenza.">
+<meta name="description" content="Il 30 settembre 2026, all'Hostellerie du Cheval Blanc di Aosta, si è tenuta l'Assemblea Costituente di FenImprese Valle d'Aosta. Presidente Alexandra Mititelu. Foto e resoconto.">
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
@@ -27,51 +27,64 @@
   .hero{background:linear-gradient(135deg,#263780,var(--navy));color:#fff;padding:54px 0 60px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:var(--orange)}
   .hero .eyebrow{font-family:'Poppins',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#ffd9b3;margin-bottom:14px}
-  .hero h1{font-size:2.3rem;margin-bottom:16px;max-width:16ch}
-  .hero p.lead{font-size:1.05rem;color:#e8ecff;max-width:52ch;margin-bottom:26px}
+  .hero h1{font-size:2.3rem;margin-bottom:16px;max-width:18ch}
+  .hero h1 .hl{color:var(--orange)}
+  .hero p.lead{font-size:1.05rem;color:#e8ecff;max-width:56ch;margin-bottom:26px}
   .facts{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:.98rem}
   .facts .f{display:flex;align-items:center;gap:9px}
   .facts .f b{font-weight:600}
   .facts .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0}
 
-  .main{padding:50px 0 70px}
-  .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:start}
+  .main{padding:50px 0 24px}
+  .lead-row{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:start}
+  .article h2{font-size:1.5rem;color:var(--navy);margin:26px 0 14px}
+  .article h2:first-child{margin-top:0}
+  .article p{color:var(--ink);margin-bottom:16px}
+  .article p.intro{font-size:1.12rem;color:var(--ink);font-weight:500}
+  .pull{background:linear-gradient(150deg,#fff,#eef4fb);border-left:4px solid var(--orange);border-radius:0 14px 14px 0;padding:20px 24px;margin:22px 0;font-family:'Poppins',sans-serif;font-weight:500;color:var(--navy);font-size:1.08rem;line-height:1.5}
 
-  .info h2{font-size:1.5rem;color:var(--navy);margin-bottom:16px}
-  .info p{color:var(--muted);margin-bottom:16px}
-  .info ul{list-style:none;margin:18px 0 0}
-  .info li{position:relative;padding-left:30px;margin-bottom:14px;color:var(--ink)}
-  .info li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--orange);opacity:.18}
-  .info li::after{content:"";position:absolute;left:5px;top:12px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
-  .info li b{color:var(--navy)}
+  .board{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);position:sticky;top:96px}
+  .board h3{font-size:1.05rem;color:var(--navy);margin-bottom:4px}
+  .board .cap{font-size:.8rem;color:var(--muted);margin-bottom:18px}
+  .board .row{display:flex;flex-direction:column;padding:12px 0;border-top:1px solid var(--line)}
+  .board .row:first-of-type{border-top:0}
+  .board .row .role{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);font-family:'Poppins',sans-serif;font-weight:600}
+  .board .row .name{font-family:'Poppins',sans-serif;font-weight:600;color:var(--ink);font-size:1rem}
+  @media(max-width:860px){.lead-row{grid-template-columns:1fr;gap:30px}.board{position:static}}
 
-  .form-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
-  .form-card h3{font-size:1.3rem;color:var(--navy);margin-bottom:6px}
-  .form-card .sub{color:var(--muted);font-size:.92rem;margin-bottom:22px}
-  .field{margin-bottom:15px}
-  .field label{display:block;font-family:'Poppins',sans-serif;font-weight:600;font-size:.82rem;margin-bottom:6px;color:var(--navy)}
-  .req{color:var(--orange)}
-  .field input,.field select{width:100%;padding:12px 14px;font-family:inherit;font-size:1rem;color:var(--ink);background:#FBFCFE;border:1.5px solid var(--line);border-radius:10px;transition:border-color .15s,box-shadow .15s}
-  .field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(55,134,193,.15);background:#fff}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .consent{display:flex;gap:11px;align-items:flex-start;background:#F7F9FD;border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin:8px 0 20px}
-  .consent input{margin-top:3px;width:17px;height:17px;accent-color:var(--navy);flex-shrink:0}
-  .consent span{font-size:.83rem;color:var(--muted);line-height:1.5}
-  .btn-primary{font-family:'Poppins',sans-serif;font-weight:600;font-size:1.03rem;width:100%;justify-content:center;cursor:pointer;padding:15px;border-radius:999px;border:0;color:#fff;background:var(--orange);box-shadow:0 12px 26px -10px rgba(245,142,50,.75);transition:transform .12s,background .15s}
+  .gallery-sec{padding:20px 0 60px}
+  .sec-head{margin-bottom:22px}
+  .sec-head .eyebrow{font-family:'Poppins',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+  .sec-head h2{font-size:1.5rem;color:var(--navy);margin-top:8px}
+  .gallery{display:grid;grid-template-columns:2fr 1fr;grid-auto-rows:220px;gap:14px}
+  .gallery a{display:block;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 12px 30px -20px rgba(31,44,90,.5);background:#dce4f2}
+  .gallery a img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .gallery a:hover img{transform:scale(1.04)}
+  .gallery .big{grid-row:span 2}
+  .gallery .tall{grid-row:span 2}
+  @media(max-width:720px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gallery .big{grid-column:span 2;grid-row:span 2}.gallery .tall{grid-row:span 2}}
+
+  .press{background:var(--white);border-top:1px solid var(--line);padding:46px 0}
+  .press h2{font-size:1.4rem;color:var(--navy);margin-bottom:6px}
+  .press .cap{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .press-grid a{display:block;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:border-color .15s,transform .12s}
+  .press-grid a:hover{border-color:var(--blue);transform:translateY(-2px)}
+  .press-grid .src{font-family:'Poppins',sans-serif;font-weight:600;color:var(--navy);font-size:.95rem;margin-bottom:4px}
+  .press-grid .t{color:var(--muted);font-size:.86rem;line-height:1.45}
+  .press-grid .arrow{color:var(--orange);font-weight:600;font-size:.84rem;margin-top:8px;display:inline-block}
+
+  .cta{background:linear-gradient(135deg,#263780,var(--navy));color:#fff;padding:44px 0;text-align:center}
+  .cta h2{font-size:1.6rem;margin-bottom:10px}
+  .cta p{color:#e8ecff;max-width:52ch;margin:0 auto 22px}
+  .btn-primary{font-family:'Poppins',sans-serif;font-weight:600;font-size:1.03rem;display:inline-flex;align-items:center;gap:8px;cursor:pointer;padding:14px 30px;border-radius:999px;border:0;color:#fff;background:var(--orange);box-shadow:0 12px 26px -10px rgba(245,142,50,.6);transition:transform .12s,background .15s}
   .btn-primary:hover{background:#e37f22;transform:translateY(-2px)}
-  .btn-primary:disabled{opacity:.6;cursor:not-allowed;transform:none}
-  .form-note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:14px}
-
-  .success{display:none;text-align:center;padding:20px 6px}
-  .success .tick{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:#eafaf0;color:#2e9e5b;display:flex;align-items:center;justify-content:center;font-size:34px}
-  .success h3{font-size:1.4rem;color:var(--navy);margin-bottom:10px}
-  .success p{color:var(--muted)}
 
   footer{background:var(--navy);color:#dbe2f5;padding:30px 0;font-size:.85rem}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
   footer a{color:#fff}
 
-  @media(max-width:820px){.grid{grid-template-columns:1fr;gap:32px}.hero h1{font-size:1.9rem}.row2{grid-template-columns:1fr}}
+  @media(max-width:820px){.hero h1{font-size:1.9rem}}
 </style>
 </head>
 <body>
@@ -84,86 +97,95 @@
 
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow">Assemblea Costituente</div>
-      <h1>Nasce FenImprese Valle d'Aosta</h1>
-      <p class="lead">Ti invitiamo all'evento di presentazione della nostra associazione al tessuto economico e istituzionale valdostano. Conferma la tua presenza: l'ingresso &egrave; libero.</p>
+      <div class="eyebrow">Assemblea Costituente &middot; Il resoconto</div>
+      <h1>&Egrave; nata <span class="hl">FenImprese Valle d'Aosta</span></h1>
+      <p class="lead">Il 30 settembre 2026, all'Hostellerie du Cheval Blanc di Aosta, imprenditori, dirigenti nazionali e rappresentanti del territorio hanno dato vita alla nuova associazione datoriale valdostana. Alla guida &egrave; stata eletta presidente Alexandra Mititelu.</p>
       <div class="facts">
         <div class="f"><span class="dot"></span><b>30 settembre 2026</b></div>
         <div class="f"><span class="dot"></span>Hostellerie du Cheval Blanc, Aosta</div>
-        <div class="f"><span class="dot"></span><b>17:30 &ndash; 20:00</b></div>
+        <div class="f"><span class="dot"></span>Assemblea Costituente</div>
       </div>
     </div>
   </section>
 
   <main class="main">
-    <div class="wrap grid">
-      <div class="info">
-        <h2>Un nuovo punto di riferimento per le imprese</h2>
-        <p>FenImprese Valle d'Aosta nasce per rappresentare e sostenere le imprese del territorio: rappresentanza presso le istituzioni, servizi, convenzioni e formazione, con un'attenzione particolare alle piccole e medie realt&agrave; e al contesto alpino della nostra regione.</p>
-        <p>L'Assemblea Costituente &egrave; il momento in cui presentiamo l'associazione, i suoi obiettivi e le prime iniziative. Un'occasione per conoscerci, incontrare altre imprese e le istituzioni locali.</p>
-        <ul>
-          <li><b>Presentazione dell'associazione</b> e delle linee operative</li>
-          <li><b>Interventi</b> di rappresentanti e partner del territorio</li>
-          <li><b>Aperitivo</b> di networking a seguire, nello stesso luogo</li>
-        </ul>
+    <div class="wrap lead-row">
+      <div class="article">
+        <p class="intro">Con l'Assemblea Costituente del 30 settembre 2026 nasce ufficialmente FenImprese Valle d'Aosta, la sede regionale della Federazione Nazionale Imprese. Davanti a una sala gremita di imprenditori e professionisti, insieme ai vertici nazionali della federazione, &egrave; stato presentato il nuovo soggetto datoriale e sono state assegnate le cariche del direttivo regionale.</p>
+
+        <p>FenImprese &egrave; un'associazione datoriale nazionale con forte operativit&agrave; sul territorio, gi&agrave; presente in diverse regioni italiane e ora attiva anche in Valle d'Aosta. L'obiettivo &egrave; rappresentare e sostenere le imprese locali presso le istituzioni e offrire loro servizi concreti, dalla consulenza alla formazione, dal credito alle convenzioni.</p>
+
+        <div class="pull">Un nuovo modo di fare associazione: pi&ugrave; vicino alle imprese, al loro territorio e ai loro bisogni reali.</div>
+
+        <h2>Una rappresentanza trasversale</h2>
+        <p>La nuova associazione guarda a tutti i settori dell'economia valdostana &mdash; industria, commercio, artigianato, turismo e sanit&agrave; &mdash; con un'attenzione particolare alle piccole e medie imprese e alle specificit&agrave; del contesto alpino di montagna. L'adesione, hanno ricordato i promotori, &egrave; aperta a tutte le imprese del territorio.</p>
+
+        <h2>Il percorso parte da qui</h2>
+        <p>L'Assemblea Costituente &egrave; il primo passo di un percorso: nelle prossime settimane prenderanno il via le iniziative della federazione sul territorio, dalle convenzioni per i soci ai percorsi di formazione gi&agrave; in programma. Chi non ha potuto partecipare pu&ograve; comunque associarsi e seguire da subito le attivit&agrave; dell'associazione.</p>
       </div>
 
-      <div>
-        <form id="signup-assemblea" class="form-card" novalidate>
-          <h3>Conferma la tua presenza</h3>
-          <p class="sub">Compila il modulo: l'iscrizione &egrave; gratuita e ci aiuta a organizzare al meglio l'accoglienza e l'aperitivo.</p>
-
-          <div class="field">
-            <label for="nome">Nome e cognome <span class="req">*</span></label>
-            <input id="nome" name="nome" type="text" placeholder="Mario Rossi" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="azienda">Azienda / Studio / Ente</label>
-            <input id="azienda" name="azienda" type="text" placeholder="La tua impresa (facoltativo)" autocomplete="organization">
-          </div>
-          <div class="row2">
-            <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input id="email" name="email" type="email" placeholder="nome@azienda.it" required autocomplete="email">
-            </div>
-            <div class="field">
-              <label for="tel">Telefono <span class="req">*</span></label>
-              <input id="tel" name="tel" type="tel" placeholder="+39 ..." required autocomplete="tel">
-            </div>
-          </div>
-          <div class="field">
-            <label for="partecipanti">Numero di partecipanti <span class="req">*</span></label>
-            <select id="partecipanti" name="partecipanti" required>
-              <option value="1">1 persona</option>
-              <option value="2">2 persone</option>
-              <option value="3">3 persone</option>
-              <option value="4">4 persone</option>
-              <option value="5+">5 o pi&ugrave;</option>
-            </select>
-          </div>
-
-          <!-- Campo nascosto: dice allo script di scrivere nella scheda "Assemblea" -->
-          <input type="hidden" name="tipo" value="assemblea">
-          <!-- Fonte campagna (social, pec, ecc.) letta dall'URL -->
-          <input type="hidden" id="fonte" name="fonte" value="">
-
-          <label class="consent">
-            <input type="checkbox" name="privacy" required>
-            <span>Ho letto e accetto l'<a href="privacy.html" target="_blank" rel="noopener">informativa sul trattamento dei dati personali</a>. <span class="req">*</span></span>
-          </label>
-
-          <button type="submit" class="btn-primary">Confermo la presenza</button>
-          <p class="form-note">I campi con <span class="req">*</span> sono obbligatori. Riceverai conferma via email.</p>
-        </form>
-
-        <div class="success" id="success">
-          <div class="tick">&#10003;</div>
-          <h3>Iscrizione registrata</h3>
-          <p>Grazie per aver confermato la tua presenza.<br>Ti aspettiamo il 30 settembre al Cheval Blanc.</p>
-        </div>
-      </div>
+      <aside class="board">
+        <h3>Il direttivo</h3>
+        <div class="cap">FenImprese Valle d'Aosta</div>
+        <div class="row"><span class="role">Presidente</span><span class="name">Alexandra Mititelu</span></div>
+        <div class="row"><span class="role">Vicepresidente</span><span class="name">Mauro Battaglino</span></div>
+        <div class="row"><span class="role">Direttore</span><span class="name">Jean-Pierre Feo</span></div>
+        <div class="row"><span class="role">Con il direttivo nazionale</span><span class="name">Luca Vincenzo Mancuso<br><span style="font-weight:400;font-size:.82rem;color:var(--muted)">Presidente Nazionale FenImprese</span></span></div>
+      </aside>
     </div>
   </main>
+
+  <section class="gallery-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Galleria</div>
+        <h2>Le immagini della giornata</h2>
+      </div>
+      <div class="gallery">
+        <a class="big" href="assemblea-2.jpg" target="_blank" rel="noopener"><img src="assemblea-2.jpg" alt="Il direttivo di FenImprese Valle d'Aosta sul palco dell'Assemblea Costituente" loading="lazy"></a>
+        <a href="assemblea-1.jpg" target="_blank" rel="noopener"><img src="assemblea-1.jpg" alt="I rappresentanti di FenImprese Valle d'Aosta" loading="lazy"></a>
+        <a class="tall" href="assemblea-3.jpg" target="_blank" rel="noopener"><img src="assemblea-3.jpg" alt="Un momento degli interventi durante l'assemblea" loading="lazy"></a>
+        <a href="assemblea-4.jpg" target="_blank" rel="noopener"><img src="assemblea-4.jpg" alt="La sala dell'Hostellerie du Cheval Blanc durante l'Assemblea Costituente" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="press">
+    <div class="wrap">
+      <h2>Ne hanno parlato</h2>
+      <p class="cap">La nascita di FenImprese Valle d'Aosta sulle testate del territorio.</p>
+      <div class="press-grid">
+        <a href="https://aostasera.it/notizie/economia/nasce-anche-in-valle-daosta-fenimprese-la-presidente-e-alexandra-mititelu/" target="_blank" rel="noopener">
+          <div class="src">AostaSera</div>
+          <div class="t">Nasce anche in Valle d'Aosta FenImprese. La presidente &egrave; Alexandra Mititelu</div>
+          <span class="arrow">Leggi l'articolo &rarr;</span>
+        </a>
+        <a href="https://www.gazzettamatin.com/2026/09/30/nasce-fenimprese-vda/" target="_blank" rel="noopener">
+          <div class="src">Gazzetta Matin</div>
+          <div class="t">Nasce FenImprese VdA, Alexandra Mititelu presidente</div>
+          <span class="arrow">Leggi l'articolo &rarr;</span>
+        </a>
+        <a href="https://www.ansa.it/valledaosta/notizie/2026/09/29/associazione-fenimprese-apre-in-valle-daosta_36c3c572-afc9-4e2e-b7b1-fc5ea97ebacf.html" target="_blank" rel="noopener">
+          <div class="src">ANSA Valle d'Aosta</div>
+          <div class="t">Associazione FenImprese apre in Valle d'Aosta</div>
+          <span class="arrow">Leggi l'articolo &rarr;</span>
+        </a>
+        <a href="https://aostanews24.it/nasce-fenimprese-valle-daosta-una-nuova-realta-al-servizio-delle-imprese-del-territorio/" target="_blank" rel="noopener">
+          <div class="src">AostaNews24</div>
+          <div class="t">Nasce FenImprese Valle d'Aosta: una nuova realt&agrave; al servizio delle imprese</div>
+          <span class="arrow">Leggi l'articolo &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Vuoi far parte di FenImprese Valle d'Aosta?</h2>
+      <p>L'associazione &egrave; aperta a tutte le imprese del territorio. Associati e accedi a servizi, convenzioni e formazione.</p>
+      <a href="index.html#associati" class="btn-primary">Associati ora</a>
+    </div>
+  </section>
 
   <footer>
     <div class="wrap">
@@ -171,33 +193,5 @@
       <span><a href="index.html">Sito</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="cookie.html">Cookie</a></span>
     </div>
   </footer>
-
-<script>
-  // Fonte campagna: legge ?utm_source= o ?f= dall'URL (es. link nei social o nella PEC)
-  (function(){
-    var p=new URLSearchParams(location.search);
-    var f=p.get('utm_source')||p.get('f')||'assemblea';
-    var el=document.getElementById('fonte'); if(el) el.value=f;
-  })();
-
-  // Stesso endpoint del modulo adesioni del sito
-  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwHo48KUYdYgYVjm_8X_t6NlR8qDRTSarZIr0g1LvCDwyOo74_mADnQaVTJwItzqu3Qxg/exec';
-
-  document.getElementById('signup-assemblea').addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!this.checkValidity()){this.reportValidity();return;}
-    var form=this, btn=form.querySelector('button[type="submit"]');
-    function done(){
-      form.style.display='none';
-      var s=document.getElementById('success');
-      s.style.display='block';
-      s.scrollIntoView({behavior:'smooth',block:'center'});
-    }
-    if(FORM_ENDPOINT){
-      if(btn){btn.disabled=true;btn.textContent='Invio in corso...';}
-      fetch(FORM_ENDPOINT,{method:'POST',body:new FormData(form)}).then(done).catch(done);
-    } else { done(); }
-  });
-</script>
 </body>
 </html>
